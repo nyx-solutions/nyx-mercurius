@@ -1,0 +1,40 @@
+{
+  "name": "nyx-solutions/nyx-mercurius",
+  "description": "NYX Helpers",
+  "type": "library",
+  "keywords": ["wordpress", "cli", "wp-cli", "php"],
+  "license": "BSD-3-Clause",
+  "version": "4.0.0",
+  "authors": [
+    {
+      "name": "NYX Solutions",
+      "email": "nyx@jsas.com.br"
+    },
+    {
+      "name": "Jonatas Sas",
+      "email": "atendimento@jsas.com.br"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.4.0",
+
+    "wp-cli/wp-cli": "~2.4.1"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "nyx\\wp\\cli\\": "cli/"
+    }
+  },
+  "config": {
+    "process-timeout": 1800
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/nyx-solutions/php-mercurius"
+    }
+  ]
+}
