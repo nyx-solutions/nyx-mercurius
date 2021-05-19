@@ -1,10 +1,10 @@
 {
   "name": "nyx-solutions/nyx-mercurius",
-  "description": "NYX Helpers",
+  "description": "NYX Mercurius WP-CLI Project Manager",
   "type": "library",
   "keywords": ["wordpress", "cli", "wp-cli", "php"],
   "license": "BSD-3-Clause",
-  "version": "4.0.0",
+  "version": "1.0.0",
   "authors": [
     {
       "name": "NYX Solutions",
@@ -25,7 +25,7 @@
   },
   "autoload": {
     "psr-4": {
-      "nyx\\wp\\cli\\": "cli/"
+      "nyx\\mercurius\\wp\\cli\\": "cli/"
     }
   },
   "config": {
