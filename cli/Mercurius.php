@@ -2,6 +2,8 @@
 
     namespace nyx\mercurius\wp\cli;
 
+    use \WP_CLI;
+
     /**
      * NYX Mercurius
      */

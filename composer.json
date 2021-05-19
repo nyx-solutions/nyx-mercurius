@@ -4,7 +4,7 @@
   "type": "library",
   "keywords": ["wordpress", "cli", "wp-cli", "php"],
   "license": "BSD-3-Clause",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "authors": [
     {
       "name": "NYX Solutions",
