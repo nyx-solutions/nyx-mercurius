@@ -5,7 +5,7 @@
     /**
      * NYX Mercurius Project Management Command
      */
-    class ProjectCommand extends MercuriusCommand
+    final class ProjectCommand
     {
         /**
          * @param string

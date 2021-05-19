@@ -4,7 +4,7 @@
   "type": "library",
   "keywords": ["wordpress", "cli", "wp-cli", "php"],
   "license": "BSD-3-Clause",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     {
       "name": "NYX Solutions",
@@ -36,7 +36,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/nyx-solutions/php-mercurius"
+      "url": "https://github.com/nyx-solutions/nyx-mercurius"
     }
   ]
 }
