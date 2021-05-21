@@ -4,7 +4,7 @@
   "type": "library",
   "keywords": ["wordpress", "cli", "wp-cli", "php"],
   "license": "BSD-3-Clause",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "authors": [
     {
       "name": "NYX Solutions",
@@ -19,9 +19,13 @@
   "require": {
     "php": ">=7.4.0",
 
+    "ext-json": "*",
+
     "composer-runtime-api": "^2.0",
 
-    "wp-cli/wp-cli": "~2.4.1"
+    "wp-cli/wp-cli": "~2.4.1",
+
+    "php-curl-class/php-curl-class": "~9.1.0"
   },
   "require-dev": {
   },
