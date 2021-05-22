@@ -28,6 +28,16 @@ or add
 
 to the require section of your `composer.json` file.
 
+## Changelog
+
+### 1.1.1
+
+- **ProjectCommand**: before issuing a `plugin uninstall` command, verifies if the plugin is installed.
+
+### 1.1.0
+
+- First stable version.
+
 ## License
 
 **nyx-mercurius** is released under the BSD 3-Clause License. See the bundled `LICENSE.md` for details.

@@ -18,7 +18,7 @@
         /**
          * @param string
          */
-        protected string $version = '1.0.0';
+        protected string $version = '1.0.1';
 
         /**
          * Prints the NYX Mercurius Project Management Command
@@ -47,6 +47,8 @@
                 $configurations = Mercurius::load_config($environment);
 
                 if (is_array($configurations)) {
+                    $current_installed_plugins = Mercurius::get_current_installed_plugins();
+
                     if (Mercurius::write_site_config($configurations)) {
                         WP_CLI::success('Configuration file created with success at /environment.json.');
                     } else {
@@ -57,7 +59,7 @@
 
                     foreach ($configurations['default_plugins'] as $plugin) {
                         if ($plugin['can_update']) {
-                            if ($plugin['from_remote']) {
+                            if ($plugin['from_remote'] && in_array($plugin['name'], $current_installed_plugins, true)) {
                                 WP_CLI::runcommand("plugin uninstall {$plugin['name']} --deactivate");
                             }
 

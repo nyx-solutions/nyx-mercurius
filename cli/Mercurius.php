@@ -48,6 +48,11 @@
          */
         protected static string $plugins_repository_pwd = '';
 
+        /**
+         * @var array
+         */
+        protected static array $current_installed_plugins = [];
+
         #region Initialization
         /**
          * Initialize all of the available command.
@@ -146,6 +151,14 @@
             }
 
             return "{$nyx_mercurius_dir}{$path}";
+        }
+
+        /**
+         * @return array
+         */
+        public static function get_current_installed_plugins(): array
+        {
+            return static::$current_installed_plugins;
         }
 
         /**
