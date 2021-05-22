@@ -30,6 +30,10 @@ to the require section of your `composer.json` file.
 
 ## Changelog
 
+### 1.1.2
+
+- **ProjectCommand**: multiple bugfixes.
+
 ### 1.1.1
 
 - **ProjectCommand**: before issuing a `plugin uninstall` command, verifies if the plugin is installed.

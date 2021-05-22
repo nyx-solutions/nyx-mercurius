@@ -210,6 +210,21 @@
                 $environment = '';
             }
 
+            $current_plugins = array_map(
+                static function ($plugin) {
+                    $plugin_parts = explode('/', $plugin);
+
+                    if (!empty($plugin_parts)) {
+                        return $plugin_parts[0];
+                    }
+
+                    return '';
+                },
+                array_keys(get_plugins())
+            );
+
+            static::$current_installed_plugins = $current_plugins;
+
             if (is_array(static::$configurations) && array_key_exists($environment, static::$configurations)) {
                 return static::$configurations[$environment];
             }
@@ -233,19 +248,6 @@
                         if (array_key_exists('global', $config)) {
                             $global_environment_config = $config['global'];
                         }
-
-                        $current_plugins = array_map(
-                            static function ($plugin) {
-                                $plugin_parts = explode('/', $plugin);
-
-                                if (!empty($plugin_parts)) {
-                                    return $plugin_parts[0];
-                                }
-
-                                return '';
-                            },
-                            array_keys(get_plugins())
-                        );
 
                         $unknown_plugins = [];
 
