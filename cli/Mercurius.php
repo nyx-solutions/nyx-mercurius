@@ -7,6 +7,10 @@
     use RuntimeException;
     use Throwable;
     use WP_CLI;
+    use function array_key_exists;
+    use function in_array;
+    use function is_array;
+    use function is_string;
 
     /**
      * NYX Mercurius
@@ -382,6 +386,8 @@
          * @param array $configurations
          *
          * @return bool
+         *
+         * @noinspection BadExceptionsProcessingInspection
          */
         public static function write_site_config(array $configurations): bool
         {

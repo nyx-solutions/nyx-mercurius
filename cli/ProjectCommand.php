@@ -3,7 +3,10 @@
     namespace nyx\mercurius\wp\cli;
 
     use JsonException;
+    use Throwable;
     use WP_CLI;
+    use function in_array;
+    use function is_array;
 
     /**
      * NYX Mercurius Project Management Command
@@ -18,7 +21,7 @@
         /**
          * @param string
          */
-        protected string $version = '1.0.2';
+        protected string $version = '1.0.3';
 
         /**
          * Prints the NYX Mercurius Project Management Command
@@ -79,9 +82,11 @@
 
                     foreach ($configurations['default_plugins'] as $plugin) {
                         if ($plugin['can_update']) {
-                            if ($plugin['from_remote'] && in_array($plugin['name'], $current_installed_plugins, true)) {
+                            //if ($plugin['from_remote'] && in_array($plugin['name'], $current_installed_plugins, true)) {
+                            try {
                                 WP_CLI::runcommand("plugin uninstall {$plugin['name']} --deactivate");
-                            }
+                            } catch (Throwable $exception) {}
+                            //}
 
                             WP_CLI::runcommand("plugin install {$plugin['path']} --activate");
                         }
